@@ -25,6 +25,7 @@ namespace APICart2.Controllers
 
         #region GetAllProducts Endpoint
         // GET: api/Products
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet("GetAll")]
         public async Task<ActionResult<List<ProductDto>>> GetProducts()
         {
@@ -40,6 +41,7 @@ namespace APICart2.Controllers
 
         #region GetProduct Endpoint
         // GET: api/Products/5
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
@@ -57,6 +59,7 @@ namespace APICart2.Controllers
 
         #region GetProductByBarCode Endpoint
         // GET: api/Products/5
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet("barcode/{barCode}")]
         public async Task<ActionResult<Product>> GetProductByBarCode(string barCode)
         {
@@ -75,6 +78,7 @@ namespace APICart2.Controllers
         #region Create Product Endpoint
         // POST: api/Products
         [HttpPost]
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> AddProduct([FromQuery] ProductToAddDto model)
         {
 
@@ -110,6 +114,7 @@ namespace APICart2.Controllers
 
         #region Update Product Endpoint
         // PUT: api/Products/5
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateProduct([FromQuery] int id, [FromQuery] ProductToUpdateDto model)
         {
@@ -147,6 +152,7 @@ namespace APICart2.Controllers
 
         #region Delete Product Endpoint
         // DELETE: api/Products/5
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {

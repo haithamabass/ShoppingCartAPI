@@ -1,0 +1,32 @@
+﻿@model APICart2.Models.Invoice
+@using APICart2.Models
+@using APICart2.DTOs
+@using APICart2.Controllers
+@using APICart2.Services
+
+
+<h1>Your Invoice</h1>
+
+<p>Dear @Model.FirstName @Model.LastName,</p>
+
+<p>Thank you for your order. Here are the details of your invoice:</p>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in Model.CartItems)
+    {
+        <tr>
+            <td>@item.Product.Name</td>
+            <td>@item.Quantity</td>
+            <td>@item.Product.Price</td>
+        </tr>
+    }
+</table>
+
+<p>Total: @Model.Total</p>
+
+<p>Thank you for your business.</p>

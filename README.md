@@ -1,6 +1,6 @@
 ### Shopping Cart App secured with JWT and connected with SQL Server.
 
-The Shopping Cart app provides customers with an intuitive interface to browse and select products effortlessly. Once an item is added to the cart, real-time inventory checks guarantee it is in stock before you checkout. This prevents the irritation of an order being cancelled after the fact because an item is unavailable.
+The Shopping Cart app provides customers with an intuitive system to browse and select products effortlessly. Once an item is added to the cart, real-time inventory checks guarantee it is in stock before you checkout. This prevents the irritation of an order being cancelled after the fact because an item is unavailable.
 After checkout, you receive a confirmation email with your invoice immediately. This creates a smooth, streamlined experience from start to finish. No more wondering if your order actually went through!
 
 Your privacy is also a top priority. The Shopping Cart app utilizes advanced JWT authorization to keep your personal information safe at all times. You can sign up for an account or simply checkout as a guest.
